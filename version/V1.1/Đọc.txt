@@ -1,1 +1,22 @@
-Tải file .bin về
+Tải 3 file .bin về và dùng web https://espressif.github.io/esptool-js/ để flash
+
+cách flash :
+B1 : Kết nối phần cứng
+1. Sử dụng cáp USB có dữ liệu (không dùng cáp sạc thuần túy).
+2. Cắm ESP vào máy tính.
+3. Trên trình duyệt (ưu tiên Chrome hoặc Edge), nhấn Connect và chọn đúng cổng COM của mạch.
+
+B2 :
+Thêm các file:
+ESPX_ENGLISH.ino.bootloader.bin	với địa chỉ 0x0
+ESPX_ENGLISH.ino.partitions.bin	với địa chỉ 0x8000
+ESPX_ENGLISH.ino.bin	với địa chỉ 0x10000
+
+*Lưu ý phải xóa hết fw cũ bằng cách ấn nút Erase Flash trên web
+
+B3:
+ấn Program
+
+nếu bị lỗi "Serial data stream stopped" thì 
+(1) ấn nút boot và kết nối lại với máy tính (hoặc giữ boot và ấn rst)
+(2) đổi dây mới chất lượng hơn
